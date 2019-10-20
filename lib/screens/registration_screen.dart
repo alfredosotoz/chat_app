@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'chat_screen.dart';
 
 class RegistrationScreen extends StatefulWidget {
+
+  static const String id = 'registration_screen';
+
   @override
   _RegistrationScreenState createState() => _RegistrationScreenState();
 }
@@ -82,6 +85,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   onPressed: () {
                     //Implement registration functionality.
                     Navigator.push(context, MaterialPageRoute(builder: (context) => ChatScreen()));
+                    Navigator.pushNamed(context, ChatScreen.id);
                   },
                   minWidth: 200.0,
                   height: 42.0,
